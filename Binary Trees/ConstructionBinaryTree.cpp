@@ -11,7 +11,7 @@ class node{
         this->data=data;
     }
 };
-int index=0;
+
 node* buildTree(node* root,vector<int>source,int &idx){
    int data=source[idx];
    if(data==-1)return nullptr;
@@ -22,6 +22,7 @@ node* buildTree(node* root,vector<int>source,int &idx){
    root->right=buildTree(root->right,source,idx);
    return root;
 }
+int index=0;
 node* constructTree(vector<int>&arr){
     if(index==arr.size() || arr[index]==-1){
         index++;
